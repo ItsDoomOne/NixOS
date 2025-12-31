@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
     ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "nixos"; # Define your hostname.
@@ -72,6 +73,8 @@ programs.fish = {
   pkgs.brave
   pkgs.fastfetch # porra
   pkgs.kitty
+  nixpkgs-fmt
+  vscode
   ];
   services.openssh.enable = true;
 
