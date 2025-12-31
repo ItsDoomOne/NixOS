@@ -6,5 +6,10 @@
   pkgs.kitty
   pkgs.nixpkgs-fmt
   pkgs.vscode
+  pkgs.prismlauncher
+  pkgs.gzdoom
+  pkgs.javaPackages.compiler.temurin-bin.jre-21
+  pkgs.javaPackages.compiler.temurin-bin.jre-17
+  pkgs.javaPackages.compiler.temurin-bin.jre-8
   ];
 }

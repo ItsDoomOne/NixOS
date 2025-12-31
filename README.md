@@ -5,7 +5,7 @@ Este repositório não deve ser compartilhado, utilizado ou clonado por outra pe
 
 ## Lista de afazeres
 
-1. Fragmentar a config em varios arquivos menores
+~~1. Fragmentar a config em varios arquivos menores~~
 2. Auto configurar o KDE Plasma 6
 3. Flakes
 4. Melhorar a lista de pacotes
