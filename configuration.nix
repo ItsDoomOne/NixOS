@@ -4,6 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./modules/users.nix
+      ./modules/localization.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   boot.loader.systemd-boot.enable = true;
@@ -11,27 +13,9 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
-  time.timeZone = "America/Sao_Paulo";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pt_BR.UTF-8";
-    LC_IDENTIFICATION = "pt_BR.UTF-8";
-    LC_MEASUREMENT = "pt_BR.UTF-8";
-    LC_MONETARY = "pt_BR.UTF-8";
-    LC_NAME = "pt_BR.UTF-8";
-    LC_NUMERIC = "pt_BR.UTF-8";
-    LC_PAPER = "pt_BR.UTF-8";
-    LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "pt_BR.UTF-8";
-  };
   services.xserver.enable = false;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.xserver.xkb = {
-    layout = "br";
-    variant = "";
-  };
-  console.keyMap = "br-abnt2";
   services.printing.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -41,14 +25,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true; # JACK é util no SonoBus (uso meu iPhone como microfone usando o Sonobus)
-  };
-  users.users.leonardohs = {
-    isNormalUser = true;
-    shell = pkgs.fish;
-    description = "Leonardo Heckler Schadek";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
   };
 
   programs.git.enable = true;
