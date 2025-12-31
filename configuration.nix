@@ -57,8 +57,15 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
-  programs.fish.enable = true;
-
+programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set -g fish_greeting ""
+      function fish_greeting
+       fastfetch
+      end
+    '';
+  };
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
