@@ -63,6 +63,7 @@
 
   environment.systemPackages = with pkgs; [
   pkgs.brave
+  pkgs.fastfetch # porra
   pkgs.kitty
   ];
   services.openssh.enable = true;
