@@ -8,7 +8,7 @@
       ./modules/services.nix
       ./modules/packages.nix
       ./modules/environment.nix
-      ./modules/options.nix
+      ./modules/programs.nix
       ./modules/boot.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
