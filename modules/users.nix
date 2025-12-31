@@ -8,6 +8,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       gzdoom
+      wezterm
     ];
   };
 }
