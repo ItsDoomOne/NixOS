@@ -1,6 +1,6 @@
 { ... }: {
   networking = {
-    hostName = "nixos";
+    hostName = "archleo";
     networkmanager.enable = true;
     # wireless.enable = true; # Rede sem fio; somente Thinkpad. Archleo nao tem wifi.
 
