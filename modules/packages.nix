@@ -11,5 +11,7 @@
   pkgs.javaPackages.compiler.temurin-bin.jre-21
   pkgs.javaPackages.compiler.temurin-bin.jre-17
   pkgs.javaPackages.compiler.temurin-bin.jre-8
+  pkgs.sonobus
+  pkgs.vesktop
   ];
 }
