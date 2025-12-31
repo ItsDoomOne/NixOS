@@ -4,7 +4,7 @@
   pkgs.brave
   pkgs.fastfetch # porra
   pkgs.kitty
-  nixpkgs-fmt
-  vscode
+  pkgs.nixpkgs-fmt
+  pkgs.vscode
   ];
 }
