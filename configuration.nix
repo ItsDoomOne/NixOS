@@ -1,30 +1,16 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   imports =
     [
       ./hardware-configuration.nix
       ./modules/users.nix
       ./modules/localization.nix
       ./modules/network.nix
+      ./modules/services.nix
     ];
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  services.xserver.enable = false;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  services.printing.enable = true;
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true; # JACK é util no SonoBus (uso meu iPhone como microfone usando o Sonobus)
-  };
-
   programs.git.enable = true;
   programs.steam = {
     enable = true;
@@ -50,7 +36,6 @@ programs.fish = {
   nixpkgs-fmt
   vscode
   ];
-  services.openssh.enable = true;
 
   system.stateVersion = "25.11"; 
 
