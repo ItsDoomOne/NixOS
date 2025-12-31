@@ -2,8 +2,6 @@
   home.username = "leonardohs"; 
   home.homeDirectory = "/home/leonardohs";
   home.stateVersion = "24.11"; 
-
-  # O Home Manager precisa disso pra se autogerenciar
   programs.home-manager.enable = true;
 
   # MIGRADO DE OPTIONS.NIX / PROGRAMS.NIX
@@ -27,5 +25,18 @@
     enable = true;
     userName = "ItsDoomOne";
     userEmail = "leodroid796@gmail.com";
+  };
+  gtk = {
+  enable = true;
+  theme = {
+    name = "Adwaita-dark";
+    package = pkgs.gnome-themes-extra;
+  };
+};
+
+  qt = {
+    enable = true;
+    platformTheme.name = "kde";
+    style.name = "breeze-dark";
   };
 }
