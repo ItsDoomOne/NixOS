@@ -14,5 +14,6 @@
   pkgs.sonobus
   pkgs.vesktop
   pkgs.nerd-fonts.jetbrains-mono
+  pkgs.cemu
   ];
 }

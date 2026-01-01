@@ -1,4 +1,8 @@
 { config, pkgs, ...}: {
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+};
   programs.fish.enable = true;
   programs.git.enable = true;
   programs.steam = {
