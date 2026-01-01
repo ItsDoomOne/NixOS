@@ -13,5 +13,6 @@
   pkgs.javaPackages.compiler.temurin-bin.jre-8
   pkgs.sonobus
   pkgs.vesktop
+  pkgs.nerd-fonts.jetbrains-mono
   ];
 }

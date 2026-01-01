@@ -4,7 +4,6 @@
   home.stateVersion = "24.11"; 
   programs.home-manager.enable = true;
 
-  # MIGRADO DE OPTIONS.NIX / PROGRAMS.NIX
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -20,12 +19,16 @@
     };
   };
 
-  # Se tu quiser que o Git já venha configurado com seu nome
   programs.git = {
     enable = true;
     userName = "ItsDoomOne";
     userEmail = "leodroid796@gmail.com";
   };
+  programs.kitty = {
+    enable = true;
+    extraConfig = builtins.readFile ./home/kitty/kitty.conf;
+  };
+
   gtk = {
   enable = true;
   theme = {
