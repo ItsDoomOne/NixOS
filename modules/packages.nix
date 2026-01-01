@@ -2,7 +2,7 @@
  nixpkgs.config.allowUnfree = true;
  environment.systemPackages = with pkgs; [
   pkgs.brave
-  pkgs.fastfetch # porra
+  pkgs.fastfetch
   pkgs.kitty
   pkgs.nixpkgs-fmt
   pkgs.vscode
@@ -15,5 +15,6 @@
   pkgs.vesktop
   pkgs.nerd-fonts.jetbrains-mono
   pkgs.cemu
+  pkgs.cmatrix
   ];
 }
