@@ -16,5 +16,6 @@
   pkgs.nerd-fonts.jetbrains-mono
   pkgs.cemu
   pkgs.cmatrix
+  pkgs.python315
   ];
 }
