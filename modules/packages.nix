@@ -17,5 +17,10 @@
   pkgs.cemu
   pkgs.cmatrix
   pkgs.python315
+  pkgs.mpv
+  pkgs.wget
+  pkgs.vlc
+  pkgs.uxplay
+  pkgs.shairport-sync
   ];
 }

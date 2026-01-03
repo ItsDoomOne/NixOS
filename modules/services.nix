@@ -22,6 +22,16 @@
       hide_f1_commands = true; 
     };
   };
+  avahi = {
+    enable = true; # Avahi pro UxPlay e Streming Lossless de audio.
+    nssmdns4 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      userServices = true;
+      workstation = true;
+    };
+  };
   };
   security = {
     rtkit.enable = true; # eu nao sei o que é rtkit mas tava ali por algum motivo
