@@ -22,5 +22,6 @@
   pkgs.vlc
   pkgs.uxplay
   pkgs.shairport-sync
+  pkgs.nqptp
   ];
 }
