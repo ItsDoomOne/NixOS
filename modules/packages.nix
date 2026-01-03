@@ -23,5 +23,8 @@
   pkgs.uxplay
   pkgs.shairport-sync
   pkgs.nqptp
+  pkgs.k3b
+  pkgs.cdrdao
+  pkgs.dvdplusrwtools
   ];
 }
