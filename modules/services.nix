@@ -60,23 +60,4 @@
       Restart = "on-failure";
     };
   };
-
-  services.shairport-sync.enable = true;
-  services.shairport-sync.openFirewall = true;
-
-  systemd.services.shairport-sync = {
-    after = [ "network.target" "avahi-daemon.service" "nqptp.service" "pipewire.service" ];
-    wants = [ "nqptp.service" ];
-    serviceConfig = {
-      ExecStart = lib.mkForce [
-        "" 
-        "${pkgs.shairport-sync}/bin/shairport-sync -a 'ArchLeo' -o pa -S soxr -M -g"
-      ];
-      User = lib.mkForce "leonardohs";
-      Group = lib.mkForce "users";
-      AmbientCapabilities = [ "CAP_NET_RAW" "CAP_SYS_NICE" ];
-      CapabilityBoundingSet = [ "CAP_NET_RAW" "CAP_SYS_NICE" ];
-      Restart = "on-failure";
-    };
-  };
 }

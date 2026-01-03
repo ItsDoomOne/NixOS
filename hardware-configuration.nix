@@ -23,6 +23,17 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+  fileSystems."/home/leonardohs/HDDmnt" = {
+    device = "/dev/disk/by-uuid/2bea977a-27b0-470a-920b-24515b72d868";
+    fsType = "ext4";
+
+    options = [
+      "defaults"
+      "users"              
+      "nofail"             
+      "x-systemd.automount" 
+    ];
+};
 
   swapDevices = [ ];
 
