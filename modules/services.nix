@@ -1,22 +1,13 @@
 { pkgs, lib, ...}: {
   services = {
-  xserver.enable = false; # EU ODEIO O XORG
-  desktopManager.plasma6.enable = true; # Infelizmente o plasma é o que funciona pra mim
-  printing.enable = true; # Odeio impressoras mais do que o Xorg.
-  pulseaudio.enable = false; # Pipewire ftwwwwwwwwwwwwww
-  openssh.enable = true; # ssh ftwwwwww
+  desktopManager.plasma6.enable = true;
+  printing.enable = true;
+  openssh.enable = true;
   pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true; # JACK é util no SonoBus (uso meu iPhone como microfone usando o Sonobus)
-    extraConfig.pipewire."92-low-latency" = {
-      "context.properties" = {
-      "default.clock.rate" = 48000;
-      "default.clock.allowed-rates" = [ 44100 48000 88200 96000 ];
-      };
-    };
   };
   displayManager.ly = {
     enable = true;
@@ -29,7 +20,7 @@
     };
   };
   avahi = {
-    enable = true; # Avahi pro UxPlay e Streming Lossless de audio.
+    enable = true;
     nssmdns4 = true;
     publish = {
       enable = true;
@@ -40,7 +31,7 @@
   };
   };
   security = {
-    rtkit.enable = true; # eu nao sei o que é rtkit mas tava ali por algum motivo
+    rtkit.enable = true;
   };
   nixpkgs.overlays = [
     (final: prev: {

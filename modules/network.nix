@@ -2,8 +2,6 @@
   networking = {
     hostName = "archleo";
     networkmanager.enable = true;
-    # wireless.enable = true; # Rede sem fio; somente Thinkpad. Archleo nao tem wifi.
-
     firewall = {
     enable = false;
         allowedTCPPorts = [ 
@@ -18,7 +16,7 @@
     ];
 
     allowedUDPPortRanges = [ 
-      { from = 32768; to = 61000; } # Range do airplay cru
+      { from = 32768; to = 61000; } # Range do airplay (secundario)
       { from = 6000; to = 6009; }   # Range do airplay 2 
     ];
   };

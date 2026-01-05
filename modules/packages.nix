@@ -17,7 +17,7 @@
   pkgs.wget
   pkgs.shairport-sync
   pkgs.nqptp
-  pkgs.brasero # brasero melhor que o k3b
+  pkgs.brasero
   pkgs.cdrdao
   pkgs.dvdplusrwtools
   pkgs.neovim
