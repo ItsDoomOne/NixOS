@@ -21,8 +21,8 @@
 
   programs.git = {
     enable = true;
-    userName = "ItsDoomOne";
-    userEmail = "leodroid796@gmail.com";
+    userName = "---------";
+    userEmail = "---------------";
   };
   programs.kitty = {
     enable = true;
