@@ -7,8 +7,6 @@
     description = "Leonardo Heckler Schadek";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      gzdoom
-      wezterm
     ];
   };
 }
