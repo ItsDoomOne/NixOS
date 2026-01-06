@@ -16,6 +16,7 @@
       gcom = "git commit -m";
       gpus = "git push";
       editnix = "code ~/NixOS";
+      rebuild = "sudo nixos-rebuild switch --flake ~/NixOS/.#archleo";
     };
   };
 
