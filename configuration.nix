@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   imports =
     [
-      ./hardware-configuration.nix
+      ./archleo-hardware.nix
       ./modules/users.nix
       ./modules/localization.nix
       ./modules/network.nix
