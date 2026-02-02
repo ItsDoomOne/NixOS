@@ -15,7 +15,8 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./common.nix
-        ./hardware/archleo-hardware.nix        
+        ./hardware/archleo-hardware.nix
+        ./modules/network-archleo.nix        
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -30,7 +31,9 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./common.nix
-        ./hardware/thinkleo-hardware.nix        
+        ./hardware/thinkleo-hardware.nix
+        ./modules/network-thinkleo.nix        
+        
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

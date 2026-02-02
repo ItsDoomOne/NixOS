@@ -14,7 +14,7 @@
   };
   services.xserver.xkb = {
     layout = "br";
-    variant = "";
+    variant = "thinkpad";
   };
   console.keyMap = "br-abnt2";
 }

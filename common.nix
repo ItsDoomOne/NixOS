@@ -3,7 +3,6 @@
     [
       ./modules/users.nix
       ./modules/localization.nix
-      ./modules/network.nix
       ./modules/services.nix
       ./modules/packages.nix
       ./modules/environment.nix
