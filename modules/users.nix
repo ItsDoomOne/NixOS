@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  users.users.leonardohs = {
+  users.users.doom = {
     isNormalUser = true;
     shell = pkgs.fish;
     description = "Leonardo Heckler Schadek";

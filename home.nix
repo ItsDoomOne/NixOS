@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-  home.username = "leonardohs"; 
-  home.homeDirectory = "/home/leonardohs";
+  home.username = "doom"; 
+  home.homeDirectory = "/home/doom";
   home.stateVersion = "24.11"; 
   programs.home-manager.enable = true;
 

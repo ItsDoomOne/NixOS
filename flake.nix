@@ -11,14 +11,31 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.archleo = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix        
+        ./common.nix
+        ./hardware/archleo-hardware.nix        
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.leonardohs = import ./home.nix;
+          home-manager.users.doom = import ./home.nix;
+          home-manager.backupFileExtension = "hm-backup";
+        }
+      ];
+    };
+    nixosConfigurations.thinkleo = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./common.nix
+        ./hardware/thinkleo-hardware.nix        
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.doom = import ./home.nix;
           home-manager.backupFileExtension = "hm-backup";
         }
       ];
