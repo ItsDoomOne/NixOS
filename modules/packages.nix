@@ -9,7 +9,6 @@
   pkgs.prismlauncher
   pkgs.javaPackages.compiler.temurin-bin.jre-21
   pkgs.javaPackages.compiler.temurin-bin.jre-17
-  pkgs.vesktop
   pkgs.nerd-fonts.jetbrains-mono
   pkgs.cmatrix
   pkgs.python315
@@ -18,5 +17,7 @@
   pkgs.shairport-sync
   pkgs.nqptp
   pkgs.neovim
+  pkgs.obs-studio
+  pkgs.equibop
   ];
 }

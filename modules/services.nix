@@ -38,7 +38,7 @@
       shairport-sync = prev.shairport-sync.override { enableAirplay2 = true; };
     })
   ];
-
+  hardware.bluetooth.enable = true;
   systemd.services.nqptp = {
     description = "NQPTP Daemon";
     after = [ "network.target" ];
