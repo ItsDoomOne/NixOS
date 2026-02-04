@@ -19,5 +19,6 @@
   pkgs.neovim
   pkgs.obs-studio
   pkgs.equibop
+  pkgs.wol
   ];
 }
