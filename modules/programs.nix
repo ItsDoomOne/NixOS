@@ -24,7 +24,7 @@
   };
     git = {
     enable = true;
-    settings = {
+    config = {
       user ={
         name = "ItsDoomOne";
         email = "leodroid796@gmail.com";
