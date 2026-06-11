@@ -1,4 +1,4 @@
-{pkgs,  ... }: {
+{ pkgs, ... }: {
   environment.sessionVariables = {
     TERMINAL = "kitty";
     EDITOR = "neovim";

@@ -4,4 +4,5 @@
     layout = "br";
     variant = "thinkpad";
   };
+  hardware.bluetooth.enable = true;
 }

@@ -1,15 +1,17 @@
 { config, pkgs, ... }: {
-  imports =
-    [
-      ./modules/users.nix
-      ./modules/localization.nix
-      ./modules/services.nix
-      ./modules/packages.nix
-      ./modules/environment.nix
-      ./modules/programs.nix
-      ./modules/boot.nix
-      ./modules/network.nix
-    ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "25.11"; 
+  imports = [
+    ./modules/users.nix
+    ./modules/localization.nix
+    ./modules/services.nix
+    ./modules/packages.nix
+    ./modules/environment.nix
+    ./modules/programs.nix
+    ./modules/boot.nix
+    ./modules/network.nix
+  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  system.stateVersion = "25.11";
 }

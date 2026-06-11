@@ -4,4 +4,5 @@
     layout = "br";
     variant = "abnt2";
   };
+  hardware.bluetooth.enable = false;
 }
