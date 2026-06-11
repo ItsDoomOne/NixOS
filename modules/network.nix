@@ -1,6 +1,5 @@
 { ... }: {
   networking = {
-    hostName = "archleo";
     networkmanager.enable = true;
     firewall = {
     enable = false;

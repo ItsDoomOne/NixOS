@@ -8,6 +8,7 @@
       ./modules/environment.nix
       ./modules/programs.nix
       ./modules/boot.nix
+      ./modules/network.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11"; 

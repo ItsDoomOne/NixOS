@@ -12,9 +12,5 @@
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
   };
-  services.xserver.xkb = {
-    layout = "br";
-    variant = "thinkpad";
-  };
   console.keyMap = "br-abnt2";
 }

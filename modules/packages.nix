@@ -1,7 +1,8 @@
 {pkgs, ...}: {
- nixpkgs.config.allowUnfree = true;
- environment.systemPackages = with pkgs; [
-  pkgs.brave
+nixpkgs.config.allowUnfree = true;
+environment.systemPackages = with pkgs; [
+  pkgs.protonup-qt
+  pkgs.firefox
   pkgs.fastfetch
   pkgs.kitty
   pkgs.nixpkgs-fmt
@@ -20,5 +21,10 @@
   pkgs.obs-studio
   pkgs.equibop
   pkgs.wol
+  pkgs.gcc
+  pkgs.gnumake
+  pkgs.pkg-config
+  pkgs.libffi
+  pkgs.openssl
   ];
 }
