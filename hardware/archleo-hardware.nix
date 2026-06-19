@@ -50,6 +50,11 @@
       "dmask=0077"
     ];
   };
+  fileSystems."/home/doom/MountHDD" = {
+    device = "/dev/disk/by-uuid/8a37c3fc-fc35-4266-98b5-8f0e3ab8ea1d";
+    fsType = "btrfs";
+    options = [ "compress=zstd:3" ];
+  };
 
   swapDevices = [
     { device = "/dev/disk/by-uuid/0e021081-36f2-4111-8e94-5690fb9c607e"; }
